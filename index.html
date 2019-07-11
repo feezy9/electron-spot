@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <script src="node_modules/tracking/build/tracking-min.js"></script>
+    <script src="node_modules/tracking/build/data/face-min.js"></script>
+    <style>
+      video, canvas {
+        
+        position: absolute;
+     
+      }
+    
+      video {
+        transform: scaleX(-1);
+            filter: FlipH;
+      }
+    
+      </style>
+  </head>
+  <body>
+    <div class="demo-frame">
+      <div class="demo-container">
+        <video id="video" width="740" height="480" preload autoplay loop muted></video>
+        <canvas id="canvas" width="740" height="480"></canvas>
+      </div>
+    </div>
+    <!-- <button id="async-msg">Click</button> -->
+    <p id="async-reply"></p>
+    <script>
+      // You can also require other files to run in this process
+      require('./renderer.js')
+    </script>
+  </body>
+</html>
